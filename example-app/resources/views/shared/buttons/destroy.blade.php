@@ -1,0 +1,9 @@
+<form action="{{ $action }}" method="post" class="d-inline">
+    @csrf
+    @method('delete')
+    @if (isset($buttonStyle) && $buttonStyle == 'default')
+    <button type="submit" class="btn btn-outline-danger">Delete</button>
+    @else
+    <button type="submit" class="btn btn-sm btn-circle btn-outline-danger " title="Delete" ><i class="fa fa-trash"></i></button>
+    @endif
+</form>
